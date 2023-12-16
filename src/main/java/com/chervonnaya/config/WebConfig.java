@@ -18,9 +18,9 @@ public class WebConfig implements WebMvcConfigurer {
     @Bean
     public SpringResourceTemplateResolver templateResolver(){
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
-        templateResolver.setPrefix("/WEB-INF/templates/");
+        templateResolver.setPrefix("/html/");
         templateResolver.setSuffix(".html");
-        templateResolver.setCacheable(true);
+        templateResolver.setCacheable(false);
         return templateResolver;
     }
 
@@ -28,6 +28,7 @@ public class WebConfig implements WebMvcConfigurer {
     public SpringTemplateEngine templateEngine(){
         SpringTemplateEngine templateEngine = new SpringTemplateEngine();
         templateEngine.setTemplateResolver(templateResolver());
+        templateEngine.setEnableSpringELCompiler(true);
         return templateEngine;
     }
 
@@ -46,6 +47,8 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/templates/**").addResourceLocations("/templates/");
+        registry.addResourceHandler("/html/**").addResourceLocations("/html/");
+        registry.addResourceHandler("/style/**").addResourceLocations("/style/");
+        registry.addResourceHandler("/script/**").addResourceLocations("/script/");
     }
 }
