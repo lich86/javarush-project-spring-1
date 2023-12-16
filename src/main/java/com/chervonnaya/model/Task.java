@@ -11,13 +11,11 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 @Table(name = "task", schema = "todo")
-public class Task {
+public class Task extends BaseEntity{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
     @Column(name = "description")
     private String description;
     @Enumerated(value = EnumType.ORDINAL)
     private Status status;
+
 }
