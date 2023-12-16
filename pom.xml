@@ -10,7 +10,7 @@
     <packaging>war</packaging>
 
     <build>
-        <finalName>javarush-project-spring-1</finalName>
+        <finalName>root</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
