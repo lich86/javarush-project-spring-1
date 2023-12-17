@@ -15,6 +15,6 @@ LOCK TABLES `task` WRITE;
 /*!40000 ALTER TABLE `task` DISABLE KEYS */;
 INSERT  IGNORE INTO `task` VALUES (1,'manual sunrise',1),(2,'feed crocs',2),(3,'learn java',0),(4,'
 accomplish a feat',1),(5,'cook borsch',2),(6,'play with kid',0),(7,'
-write a todo list',1),(8,'laugh',2),(9,'learn java',0),(10,'make Rome Empire great again',1),(11,'lava serfing',2),(12,'this and that',0),(13,'eat dinner',1),(14,'buy a gift',2),(15,'manual sunset',0);
+write a todo list',1),(8,'laugh',2),(9,'learn java',0),(10,'make The Roman Empire great again',1),(11,'lava serfing',2),(12,'this and that',0),(13,'eat dinner',1),(14,'buy a gift',2),(15,'manual sunset',0);
 /*!40000 ALTER TABLE `task` ENABLE KEYS */;
 UNLOCK TABLES;
